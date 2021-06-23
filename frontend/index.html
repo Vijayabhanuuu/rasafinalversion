@@ -1,0 +1,130 @@
+<html>
+   <head>
+      <style>
+         ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(40, 12, 119);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(41, 13, 201);
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(41, 13, 201);
+  color: white;
+  text-align: center;
+}
+</style>
+      <title>Chatbot</title>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Raleway:500&display=swap" rel="stylesheet">
+
+      <!--Import Font Awesome Icon Font-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+         integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />  
+
+      <!--Import materialize.css-->
+      <link rel="stylesheet" type="text/css" href="/css/materialize.min.css">
+
+      <!--Main css-->
+      <link rel="stylesheet" type="text/css" href="/css/style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+            
+   </head>
+   <body>
+      <ul>
+         <li><a class="active" href="#home">Home</a></li>
+         <li><a href="/js/about.html">About</a></li>
+         <li><a href="/js/dashboard.html">MSIT Dashboard</a></li>
+
+      </ul>
+      <div>
+         <p style="margin: 2%; text-align: justify;">  MSIT (MS in IT or Masters of Science in Information Technology) is a two-year post-graduate program in Computer Science that started in 2001. MSIT is an innovative multi-university  interdisciplinary post-graduate program. MSIT program is being offered by the 'Consortium of Institutions of Higher Learning' (CIHL), formed by the Universities. Under MOU with CMU, some Carnegie Mellon Researchers are providing guidance on the course content.</p>
+
+      </div>
+         <br>
+         <img src="/img/msitadv.jpg" width=400 height="400" style="margin-left: 5%;">
+
+
+      <div class="container">
+         <!-- Modal for rendering the charts, declare this if you want to render charts, 
+         else you remove the modal -->
+         <div id="modal1" class="modal">
+            <canvas id="modal-chart"></canvas>
+         </div>
+
+        <!--chatbot widget -->
+         <div class="widget">
+            <div class="chat_header">
+
+               <!--Add the name of the bot here -->
+               <span class="chat_header_title">MSIT Bot</span>
+               <span class="dropdown-trigger" href='#' data-target='dropdown1'>
+                  <i class="material-icons">
+                  more_vert
+                  </i>
+               </span>
+
+               <!-- Dropdown menu-->
+               <ul id='dropdown1' class='dropdown-content'>
+                  <li><a href="#" id="clear">Clear</a></li>
+                  <li><a href="#" id="restart">Restart</a></li>
+                  <li><a href="#" id="close" >Close</a></li>
+               </ul>
+            </div>
+
+            <!--Chatbot contents goes here -->
+            <div class="chats" id="chats">
+               <div class="clearfix"></div>
+            </div>
+            
+            <!--keypad for user to type the message -->
+            <div class="keypad">
+               <textarea id="userInput" placeholder="Type Hi to start the conversation..." class="usrInput"></textarea>
+               <!-- <div id="sendButton"><i class="fa fa-paper-plane" aria-hidden="true"></i></div> -->
+            </div>
+         </div>
+         <div class="footer">
+            <p>@Team Chatbot</p>
+          </div>
+         <!--bot profile-->
+         <div class="profile_div" id="profile_div">
+            <img class="imgProfile" src="/img/botAvatar.png" />
+         </div>
+      </div>
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script type="text/javascript" src="/js/materialize.min.js"></script>
+
+      <!--Main Script -->
+      <script type="text/javascript" src="/js/script.js"></script>
+
+      <!--Chart.js Script -->
+      <script type="text/javascript" src="/js/chart.min.js"></script>
+
+   </body>
+</html>
